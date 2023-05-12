@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@studentTemporaryDashBoard.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.StudentDashBoardController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@studentTemporaryDashBoard.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.StudentDashBoardController">
    <children>
       <TableView fx:id="teachersList" layoutX="249.0" layoutY="220.0" onMouseClicked="#onRowDoubleClicked" prefHeight="480.0" prefWidth="905.0" style="-fx-background-color: #223456;">
         <columns>
@@ -56,12 +56,12 @@
           </font>
       </SplitMenuButton>
       <Button fx:id="searchBtn" layoutX="1059.0" layoutY="136.0" mnemonicParsing="false" onAction="#searchBtnClicked" prefHeight="36.0" prefWidth="95.0" style="-fx-background-color: FFF2CC;" text="Search" textFill="#901ea4" />
-      <Label layoutX="474.0" layoutY="23.0" prefHeight="58.0" prefWidth="163.0" text="Welcome" textFill="WHITE">
+      <Label layoutX="474.0" layoutY="23.0" prefHeight="58.0" prefWidth="163.0" text="Welcome">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label fx:id="topNameLabel" layoutX="637.0" layoutY="34.0" prefHeight="36.0" prefWidth="436.0" text="rokon" textFill="WHITE">
+      <Label fx:id="topNameLabel" layoutX="633.0" layoutY="34.0" prefHeight="36.0" prefWidth="440.0" text="rokon">
          <font>
             <Font size="30.0" />
          </font>

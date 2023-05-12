@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.effect.Glow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="root_hbox" stylesheets="@applicationStudentDashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.StudentClassroomController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="root_hbox" stylesheets="@applicationStudentDashboard.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.StudentClassroomController">
    <children>
       <VBox prefHeight="800.0" prefWidth="220.0">
          <children>
@@ -98,153 +93,29 @@
          </children></VBox>
       <AnchorPane prefHeight="800.0" prefWidth="997.0">
          <children>
-            <ScrollPane hbarPolicy="ALWAYS" prefHeight="800.0" prefWidth="984.0" vbarPolicy="ALWAYS">
-               <content>
-                  <AnchorPane prefHeight="862.0" prefWidth="972.0">
-                     <children>
-                        <Label layoutX="45.0" layoutY="118.0" text="CLASSROOM" textFill="#ff6161">
-                           <font>
-                              <Font name="Century Gothic Bold" size="36.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane layoutX="56.0" layoutY="206.0" prefHeight="200.0" prefWidth="279.0" style="-fx-background-color: ff6b6b;" styleClass="classroomScheduleBox" stylesheets="@studentClassroom.css">
-                           <children>
-                              <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAT-SUN-FRI">
-                                 <font>
-                                    <Font name="Bookman Old Style" size="24.0" />
-                                 </font>
-                              </Text>
-                              <Label layoutX="8.0" layoutY="65.0" prefHeight="58.0" prefWidth="263.0" text="9:30 pm" textFill="WHITE">
-                                 <font>
-                                    <Font name="Franklin Gothic Medium" size="60.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="159.0" prefHeight="27.0" prefWidth="174.0" text="Ahaj Mahhin Faiak" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="355.0" layoutY="206.0" prefHeight="200.0" prefWidth="279.0" style="-fx-background-color: #70d6ff;" styleClass="classroomScheduleBox" stylesheets="@studentClassroom.css">
-                           <children>
-                              <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAT-SUN-FRI">
-                                 <font>
-                                    <Font name="Bookman Old Style" size="24.0" />
-                                 </font>
-                              </Text>
-                              <Label layoutX="8.0" layoutY="65.0" prefHeight="58.0" prefWidth="263.0" text="9:30 pm" textFill="WHITE">
-                                 <font>
-                                    <Font name="Franklin Gothic Medium" size="60.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="159.0" prefHeight="27.0" prefWidth="174.0" text="Ahaj Mahhin Faiak" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="657.0" layoutY="206.0" prefHeight="200.0" prefWidth="279.0" style="-fx-background-color: #00f5d4;" styleClass="classroomScheduleBox" stylesheets="@studentClassroom.css">
-                           <children>
-                              <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAT-SUN-FRI">
-                                 <font>
-                                    <Font name="Bookman Old Style" size="24.0" />
-                                 </font>
-                              </Text>
-                              <Label layoutX="8.0" layoutY="65.0" prefHeight="58.0" prefWidth="263.0" text="9:30 pm" textFill="WHITE">
-                                 <font>
-                                    <Font name="Franklin Gothic Medium" size="60.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="159.0" prefHeight="27.0" prefWidth="174.0" text="Ahaj Mahhin Faiak" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="56.0" layoutY="419.0" prefHeight="200.0" prefWidth="279.0" style="-fx-background-color: #fee440;" styleClass="classroomScheduleBox" stylesheets="@studentClassroom.css">
-                           <children>
-                              <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAT-SUN-FRI">
-                                 <font>
-                                    <Font name="Bookman Old Style" size="24.0" />
-                                 </font>
-                              </Text>
-                              <Label layoutX="8.0" layoutY="65.0" prefHeight="58.0" prefWidth="263.0" text="9:30 pm" textFill="WHITE">
-                                 <font>
-                                    <Font name="Franklin Gothic Medium" size="60.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="159.0" prefHeight="27.0" prefWidth="174.0" text="Ahaj Mahhin Faiak" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="355.0" layoutY="419.0" prefHeight="200.0" prefWidth="279.0" style="-fx-background-color: ff6b6b;" styleClass="classroomScheduleBox" stylesheets="@studentClassroom.css">
-                           <children>
-                              <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAT-SUN-FRI">
-                                 <font>
-                                    <Font name="Bookman Old Style" size="24.0" />
-                                 </font>
-                              </Text>
-                              <Label layoutX="8.0" layoutY="65.0" prefHeight="58.0" prefWidth="263.0" text="9:30 pm" textFill="WHITE">
-                                 <font>
-                                    <Font name="Franklin Gothic Medium" size="60.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="159.0" prefHeight="27.0" prefWidth="174.0" text="Ahaj Mahhin Faiak" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="657.0" layoutY="419.0" prefHeight="200.0" prefWidth="279.0" style="-fx-background-color: ff6b6b;" styleClass="classroomScheduleBox" stylesheets="@studentClassroom.css">
-                           <children>
-                              <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAT-SUN-FRI">
-                                 <font>
-                                    <Font name="Bookman Old Style" size="24.0" />
-                                 </font>
-                              </Text>
-                              <Label layoutX="8.0" layoutY="65.0" prefHeight="58.0" prefWidth="263.0" text="9:30 pm" textFill="WHITE">
-                                 <font>
-                                    <Font name="Franklin Gothic Medium" size="60.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="159.0" prefHeight="27.0" prefWidth="174.0" text="Ahaj Mahhin Faiak" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="56.0" layoutY="627.0" prefHeight="200.0" prefWidth="279.0" style="-fx-background-color: ff6b6b;" styleClass="classroomScheduleBox" stylesheets="@studentClassroom.css">
-                           <children>
-                              <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAT-SUN-FRI">
-                                 <font>
-                                    <Font name="Bookman Old Style" size="24.0" />
-                                 </font>
-                              </Text>
-                              <Label layoutX="8.0" layoutY="65.0" prefHeight="58.0" prefWidth="263.0" text="9:30 pm" textFill="WHITE">
-                                 <font>
-                                    <Font name="Franklin Gothic Medium" size="60.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="159.0" prefHeight="27.0" prefWidth="174.0" text="Ahaj Mahhin Faiak" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-               </content>
-            </ScrollPane>
-         </children>
-      </AnchorPane>
+            <Label fx:id="subject1" alignment="CENTER" layoutX="115.0" layoutY="163.0" prefHeight="47.0" prefWidth="307.0" style="-fx-background-color: #5690aa;" styleClass="inner_pane" text="Mathematics" textFill="WHITE" />
+            <Label fx:id="time1" alignment="CENTER" layoutX="663.0" layoutY="163.0" prefHeight="47.0" prefWidth="192.0" style="-fx-background-radius: 20px; -fx-background-color: #112233;" text="9:00 - 10 : 30 AM" textFill="WHITE" />
+            <Label fx:id="subject5" alignment="CENTER" layoutX="115.0" layoutY="496.0" prefHeight="47.0" prefWidth="307.0" style="-fx-background-color: #5690aa;" styleClass="inner_pane" text="Chemistry" textFill="WHITE" />
+            <Label fx:id="subject2" alignment="CENTER" layoutX="115.0" layoutY="246.0" prefHeight="47.0" prefWidth="307.0" style="-fx-background-color: #aa56aa;" styleClass="inner_pane" text="Bangla" textFill="WHITE" />
+            <Label fx:id="subject3" alignment="CENTER" layoutX="115.0" layoutY="334.0" prefHeight="47.0" prefWidth="307.0" style="-fx-background-color: #5690aa;" styleClass="inner_pane" text="English" textFill="WHITE" />
+            <Label fx:id="subject4" alignment="CENTER" layoutX="115.0" layoutY="418.0" prefHeight="47.0" prefWidth="307.0" style="-fx-background-color: #aa56aa;" styleClass="inner_pane" text="Physics" textFill="WHITE" />
+            <Label fx:id="subject6" alignment="CENTER" layoutX="115.0" layoutY="582.0" prefHeight="47.0" prefWidth="307.0" style="-fx-background-color: #aa56aa;" styleClass="inner_pane" text="Others" textFill="WHITE" />
+            <Label layoutX="478.0" layoutY="156.0" prefHeight="61.0" prefWidth="127.0" text="------------------&gt;&gt;&gt;" />
+            <Label fx:id="time2" alignment="CENTER" layoutX="663.0" layoutY="246.0" prefHeight="47.0" prefWidth="192.0" style="-fx-background-radius: 20px; -fx-background-color: #112233;" text="11:00 - 12 : 30 PM" textFill="WHITE" />
+            <Label fx:id="time6" alignment="CENTER" layoutX="663.0" layoutY="582.0" prefHeight="47.0" prefWidth="192.0" style="-fx-background-radius: 20px; -fx-background-color: #112233;" text="10:30 - 2 : 00 AM" textFill="WHITE" />
+            <Label fx:id="time3" alignment="CENTER" layoutX="663.0" layoutY="328.0" prefHeight="47.0" prefWidth="192.0" style="-fx-background-radius: 20px; -fx-background-color: #112233;" text="2:00 - 3 : 30 PM" textFill="WHITE" />
+            <Label fx:id="time4" alignment="CENTER" layoutX="663.0" layoutY="418.0" prefHeight="47.0" prefWidth="192.0" style="-fx-background-radius: 20px; -fx-background-color: #112233;" text="6:00 - 8 : 00 PM" textFill="WHITE" />
+            <Label fx:id="time5" alignment="CENTER" layoutX="663.0" layoutY="496.0" prefHeight="47.0" prefWidth="192.0" style="-fx-background-radius: 20px; -fx-background-color: #112233;" text="8:00 - 9 : 30 PM" textFill="WHITE" />
+            <Label layoutX="478.0" layoutY="246.0" prefHeight="61.0" prefWidth="127.0" text="------------------&gt;&gt;&gt;" />
+            <Label layoutX="478.0" layoutY="321.0" prefHeight="61.0" prefWidth="127.0" text="------------------&gt;&gt;&gt;" />
+            <Label layoutX="478.0" layoutY="418.0" prefHeight="61.0" prefWidth="127.0" text="------------------&gt;&gt;&gt;" />
+            <Label layoutX="478.0" layoutY="496.0" prefHeight="61.0" prefWidth="127.0" text="------------------&gt;&gt;&gt;" />
+            <Label layoutX="478.0" layoutY="575.0" prefHeight="61.0" prefWidth="127.0" text="------------------&gt;&gt;&gt;" />
+            <Label alignment="CENTER" layoutX="29.0" layoutY="21.0" prefHeight="79.0" prefWidth="937.0" style="-fx-background-color: #535513; -fx-background-radius: 30px;" text="Here is your class routine. You can customize it anytime as your needs." textFill="#f5f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </children>
 </HBox>

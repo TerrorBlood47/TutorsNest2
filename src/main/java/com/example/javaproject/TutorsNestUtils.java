@@ -676,8 +676,75 @@ public class TutorsNestUtils { //A utility class
         }
     }
 
+    public static void updateClassSchedule(String email, String subject1, String subject2, String subject3, String subject4, String subject5, String subject6, String time1, String time2, String time3, String time4, String time5, String time6) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(url, username, databasePassword);
+            try {
+                System.out.println(subject3 + " " + time4);
+                String sql = "INSERT INTO classroom_schedule (email, subject1, subject2, subject3, subject4, subject5, subject6, time1, time2, time3, time4, time5, time6) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                statement = connection.prepareStatement(sql);
+                statement.setString(1, email);
+                statement.setString(2, subject1);
+                statement.setString(3, subject2);
+                statement.setString(4, subject3);
+                statement.setString(5, subject4);
+                statement.setString(6, subject5);
+                statement.setString(7, subject6);
+                statement.setString(8, time1);
+                statement.setString(9, time2);
+                statement.setString(10, time3);
+                statement.setString(11, time4);
+                statement.setString(12, time5);
+                statement.setString(13, time6);
+                statement.executeUpdate();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
 
+        }
+        catch (Exception e) {
+            System.out.println(e);
+            System.out.println("Some problem");
+        }
+    }
 
+    public static String[] retrieveClassSchedule(String email) {
+        String[] information = new String[15];
+        boolean flag = false;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(url, username, databasePassword);
+            statement = connection.prepareStatement("SELECT * FROM classroom_schedule WHERE email = ? ");
+            statement.setString(1, email);
+
+            resultSet = statement.executeQuery();
+            if(!resultSet.isBeforeFirst()){
+                System.out.println("Database is empty");
+            }
+            else {
+                while(resultSet.next()) {
+                     information[0] = resultSet.getString("subject1");
+                     information[1] = resultSet.getString("subject2");
+                     information[2] = resultSet.getString("subject3");
+                     information[3] = resultSet.getString("subject4");
+                     information[4] = resultSet.getString("subject5");
+                     information[5] = resultSet.getString("subject6");
+                     information[6] = resultSet.getString("time1");
+                     information[7] = resultSet.getString("time2");
+                     information[8] = resultSet.getString("time3");
+                     information[9] = resultSet.getString("time4");
+                     information[10] = resultSet.getString("time5");
+                     information[11] = resultSet.getString("time6");
+                }
+
+            }
+        }
+        catch (Exception e) {
+            System.out.println("No Connection");
+        }
+        return information;
+    }
 
 
 }

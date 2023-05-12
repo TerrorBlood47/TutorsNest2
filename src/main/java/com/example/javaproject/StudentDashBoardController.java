@@ -224,16 +224,15 @@ public class StudentDashBoardController extends StudentDashboard implements Init
         Dialog dialog = new Dialog();
         dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
         dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
-        dialog.getDialogPane().setContent(showCustomView());
         Button okButton = (Button) dialog.getDialogPane().lookupButton(ButtonType.OK);
         okButton.setText("Add This Teacher");
+        dialog.getDialogPane().setPrefWidth(400);
+        dialog.getDialogPane().setPrefHeight(400);
         dialog.show();
-
+        dialog.getDialogPane().setContent(showCustomView());
 
         okButton.setOnAction( e -> {
-            System.out.println(teacherSelected.getName());
-            System.out.println(topNameLabel.getText());
-            String phoneNumber = TutorsNestUtils.getTeacherPhoneNumber(teacherSelected.getFirstname());
+            String phoneNumber = TutorsNestUtils.getTeacherPhoneNumber(teacherSelected.getName());
             connect( teacherSelected.getName(), topNameLabel.getText(), phoneNumber);
         });
 
@@ -247,7 +246,7 @@ public class StudentDashBoardController extends StudentDashboard implements Init
         gridPane.setVgap(3.0);
 
 
-        Label nameLabel = new Label(teacherSelected.getFirstname());
+        Label nameLabel = new Label(teacherSelected.getName());
         nameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 26)); // set font size to 16
         gridPane.add(nameLabel, 0, 0);
 

@@ -57,9 +57,12 @@ public class StudentInboxController implements Initializable {
         teacherSelected = teacherInbox.getSelectionModel().getSelectedItem();
         String studentEmail = LoginScreenController.LoginEmailInput;
         String[] studentName = TutorsNestUtils.identifyStudent(studentEmail);
-        String[] messages = TutorsNestUtils.retrieveMessage(teacherSelected.getName(), studentName[0],true);
+        String teacherName = teacherSelected.getFirstname();
+        String[] messages = TutorsNestUtils.retrieveMessage(teacherName, studentName[0],true);
+        System.out.println(teacherName + " Teacher is here");
         inboxHead.setText(messages[1]);
         teacherResponse.setText(messages[0]);
+        System.out.println("student : " + messages[1] + "teacher : " + messages[0] + " inbox");
     }
 
     public void messageSendMethod(ActionEvent event) {
@@ -68,8 +71,12 @@ public class StudentInboxController implements Initializable {
         String[] studentName = TutorsNestUtils.identifyStudent(studentEmail);
         String studentMessage = studentTextField.getText();
         String teacherMessage = "No response yet";
-        TutorsNestUtils.saveMessage(teacherSelected.lastname, studentName[0], studentMessage, teacherMessage);
-        String[] messages = TutorsNestUtils.retrieveMessage(teacherSelected.lastname, studentName[0],true);
+        String teacherName = teacherSelected.getFirstname();
+        System.out.println(teacherName);
+        System.out.println(teacherName + " from student");
+        TutorsNestUtils.saveMessage(teacherName, studentName[0], studentMessage, teacherMessage);
+
+        String[] messages = TutorsNestUtils.retrieveMessage(teacherName, studentName[0],true);
         inboxHead.setText(messages[1]);
         teacherResponse.setText(messages[0]);
         studentTextField.setText("");

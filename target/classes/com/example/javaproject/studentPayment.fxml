@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,6 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@StudentPayment.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.StudentPaymentController">
    <children>
       <AnchorPane fx:id="student_side_anchorpane" prefHeight="800.0" prefWidth="246.0" styleClass="sidepane" stylesheets="@StudentPayment.css">
@@ -89,5 +91,49 @@
             <Glow />
          </effect>
       </AnchorPane>
+      <AnchorPane prefHeight="800.0" prefWidth="997.0">
+         <children>
+            <Button fx:id="btn1" layoutX="683.0" layoutY="174.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" styleClass="btn-selected" stylesheets="@StudentPayment.css" text="Send Payment" textFill="WHITE" />
+            <Button fx:id="btn2" layoutX="683.0" layoutY="250.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" styleClass="btn-selected" stylesheets="@StudentPayment.css" text="Send Payment" textFill="WHITE" />
+            <Button fx:id="btn3" layoutX="683.0" layoutY="328.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" styleClass="btn-selected" stylesheets="@StudentPayment.css" text="Send Payment" textFill="WHITE" />
+            <Button fx:id="btn4" layoutX="683.0" layoutY="400.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" styleClass="btn-selected" stylesheets="@StudentPayment.css" text="Send Payment" textFill="WHITE" />
+            <Button fx:id="btn5" layoutX="683.0" layoutY="477.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" styleClass="btn-selected" stylesheets="@StudentPayment.css" text="Send Payment" textFill="WHITE" />
+            <Button fx:id="btn6" layoutX="683.0" layoutY="554.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" styleClass="btn-selected" stylesheets="@StudentPayment.css" text="Send Payment" textFill="WHITE" />
+            <Label fx:id="teacher1" alignment="CENTER" layoutX="102.0" layoutY="174.0" prefHeight="47.0" prefWidth="501.0" styleClass="sidepane" stylesheets="@StudentPayment.css" text="Teacher Name" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="teacher3" alignment="CENTER" layoutX="102.0" layoutY="328.0" prefHeight="47.0" prefWidth="501.0" styleClass="sidepane" stylesheets="@StudentPayment.css" text="Teacher Name" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="teacher4" alignment="CENTER" layoutX="102.0" layoutY="400.0" prefHeight="47.0" prefWidth="501.0" styleClass="sidepane" stylesheets="@StudentPayment.css" text="Teacher Name" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="teacher5" alignment="CENTER" layoutX="102.0" layoutY="477.0" prefHeight="47.0" prefWidth="501.0" styleClass="sidepane" stylesheets="@StudentPayment.css" text="Teacher Name" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="teacher6" alignment="CENTER" layoutX="102.0" layoutY="554.0" prefHeight="47.0" prefWidth="501.0" styleClass="sidepane" stylesheets="@StudentPayment.css" text="Teacher Name" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="teacher2" alignment="CENTER" layoutX="102.0" layoutY="250.0" prefHeight="47.0" prefWidth="501.0" styleClass="sidepane" stylesheets="@StudentPayment.css" text="Teacher Name" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="dueText" alignment="CENTER" layoutX="195.0" layoutY="52.0" prefHeight="66.0" prefWidth="553.0" style="-fx-background-color: #450956;" styleClass="sidepane" stylesheets="@StudentPayment.css" text="Your Total Due : 20000 Taka" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </children>
 </HBox>

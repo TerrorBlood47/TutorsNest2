@@ -46,7 +46,7 @@ public class studentSignUpScreenController {
     void signUpBtnClicked(ActionEvent event) {
         connect();
         System.out.println("Something");
-        TutorsNestUtils.switchScene(event,"StudentTemporaryDashBoard.fxml","Home");
+        TutorsNestUtils.switchScene(event,"Login.fxml","Login Screen");
     }
     public void connect() {
         System.out.println(firstNameField.getText());
