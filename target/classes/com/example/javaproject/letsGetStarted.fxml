@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@letsGetStarted.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.LetsGetStartedScreenController">
+   <children>
+      <JFXButton fx:id="letsGetStartedButton" layoutX="55.0" layoutY="471.0" prefHeight="51.0" prefWidth="258.0" styleClass="letsBeginbtn" stylesheets="@letsGetStarted.css" text="Let's Begin" textFill="WHITE">
+         <font>
+            <Font name="AnjaliOldLipi Regular" size="29.0" />
+         </font>
+      </JFXButton>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="55.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME TO" wrappingWidth="562.23974609375">
+         <font>
+            <Font size="78.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="55.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TUTOR'S NEST" wrappingWidth="577.23974609375">
+         <font>
+            <Font name="Laksaman Bold" size="78.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="632.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/BIRD-ICON.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="55.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A bridge that Connects teachers and students from all over the world" wrappingWidth="577.23974609375">
+         <font>
+            <Font name="SansSerif Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="55.0" layoutY="742.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" wrappingWidth="174.6220245361327">
+         <font>
+            <Font name="SansSerif Italic" size="13.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="LoginButton" layoutX="220.0" layoutY="610.0" prefHeight="54.0" prefWidth="84.0" styleClass="Loginbtn" stylesheets="@letsGetStarted.css" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font name="FreeSerif Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@teacherSignUp.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.TeacherSignUpController">
+   <children>
+      <AnchorPane layoutX="114.0" layoutY="47.0" prefHeight="674.0" prefWidth="982.0" styleClass="innerpane" stylesheets="@teacherSignUp.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="304.0" layoutY="55.0" prefHeight="58.0" prefWidth="374.0" text="Welcome to the Tutor's Nest Family" textFill="WHITE">
+               <font>
+                  <Font name="Laksaman" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstNameField" layoutX="286.0" layoutY="163.0" prefHeight="45.0" prefWidth="192.0" promptText="First Name" styleClass="textfield" stylesheets="@teacherSignUp.css" />
+            <TextField fx:id="lastNameField" layoutX="517.0" layoutY="163.0" prefHeight="45.0" prefWidth="192.0" promptText="Last Name" styleClass="textfield" stylesheets="@teacherSignUp.css" />
+            <TextField fx:id="emailField" layoutX="285.0" layoutY="242.0" prefHeight="45.0" prefWidth="425.0" promptText="Email" styleClass="textfield" stylesheets="@teacherSignUp.css" />
+            <TextField fx:id="mobileNumberField" layoutX="285.0" layoutY="327.0" prefHeight="45.0" prefWidth="425.0" promptText="Mobile Number" styleClass="textfield" stylesheets="@teacherSignUp.css" />
+            <PasswordField fx:id="passwordField" layoutX="285.0" layoutY="417.0" prefHeight="45.0" prefWidth="425.0" promptText="Password" styleClass="passwordfield" stylesheets="@teacherSignUp.css" />
+            <Button fx:id="nextPageBtn" layoutX="376.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToSecondPage" prefHeight="45.0" prefWidth="231.0" styleClass="signUpBtn" stylesheets="@teacherSignUp.css" text="Next Page" textFill="WHITE">
+               <font>
+                  <Font name="Laksaman" size="16.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <Glow level="0.29" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

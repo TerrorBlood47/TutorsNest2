@@ -1,0 +1,11 @@
+
+.bgpane{
+ -fx-background-color: linear-gradient(to top ,  hsba(265, 50%, 51%, 1) , #05f297 );
+}
+
+.buttons{
+    -fx-background-color: none;
+    -fx-border-color: white;
+    -fx-border-radius: 20 20 20 20;
+}
+

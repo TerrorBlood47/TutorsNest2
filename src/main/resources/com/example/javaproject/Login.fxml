@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@LoginScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.LoginScreenController">
+   <children>
+      <AnchorPane layoutX="150.0" layoutY="70.0" prefHeight="640.0" prefWidth="900.0" styleClass="innerpane" stylesheets="@LoginScreen.css">
+         <children>
+            <TextField fx:id="emailInput" layoutX="237.0" layoutY="189.0" prefHeight="27.0" prefWidth="445.0" promptText="Email" styleClass="textfield" stylesheets="@LoginScreen.css" />
+            <PasswordField fx:id="passwordInput" layoutX="237.0" layoutY="272.0" prefHeight="27.0" prefWidth="445.0" promptText="Password" styleClass="passwordfield" stylesheets="@LoginScreen.css" />
+            <Button fx:id="loginButton" layoutX="237.0" layoutY="438.0" mnemonicParsing="false" onAction="#loginSelected" prefHeight="41.0" prefWidth="445.0" styleClass="buttons" stylesheets="@LoginScreen.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Mitra Mono" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="SignUpButton" layoutX="481.0" layoutY="538.0" mnemonicParsing="false" onAction="#signUpSelected" opacity="0.88" prefHeight="40.0" prefWidth="94.0" styleClass="singupbutton" stylesheets="@LoginScreen.css" text="SIGN UP" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="378.0" layoutY="71.0" prefHeight="73.0" prefWidth="145.0" styleClass="loginlabel" stylesheets="@LoginScreen.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Laksaman" size="34.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="532.0" prefHeight="51.0" prefWidth="166.0" text="Don't have an account ? " textFill="WHITE">
+               <font>
+                  <Font name="NATS" size="17.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="studentChecker" layoutX="237.0" layoutY="345.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="187.0" styleClass="checkbox" stylesheets="@LoginScreen.css" text="I'm a student" textFill="WHITE">
+               <font>
+                  <Font name="Laksaman" size="16.0" />
+               </font>
+            </CheckBox>
+         </children>
+         <effect>
+            <Glow level="0.54" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

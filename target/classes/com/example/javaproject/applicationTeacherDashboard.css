@@ -1,0 +1,37 @@
+.profile_layout{
+    -fx-background-color: #EBC95E;
+    -fx-background-radius: 0 0 50 50;
+}
+
+.profile_picture{
+    -fx-background-radius: 50%;
+
+}
+
+.edit_button{
+    -fx-background-color: #EBC95E;
+    -fx-background-radius: 50;
+}
+
+.info_layout{
+    -fx-background-color : white;
+    /*-fx-background-radius: */
+}
+
+.magnifying_glass_button{
+    -fx-background-color: #fff;
+   -fx-background-radius:40;
+}
+
+.most_contacted_layout{
+    -fx-background-radius: 0 50 50 50;
+}
+
+
+.light-gray-background{
+    -fx-background-color: #e9ecef;
+}
+
+.skill-buttons{
+    -fx-background-radius: 50 ;
+}

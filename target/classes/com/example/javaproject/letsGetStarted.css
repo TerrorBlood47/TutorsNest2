@@ -1,0 +1,29 @@
+.letsBeginbtn {
+            /*-fx-background-color: #5A555F;*/
+            -fx-border-color: white;
+            -fx-padding: 15px 32px;
+            -fx-border-radius: 20%;
+            -fx-border-width: 2px;
+            -fx-background-radius: 20%;
+            -fx-background-color : none;
+
+}
+
+.bgpane{
+/* -fx-background-color: #50238A;*/
+ -fx-background-color: linear-gradient(to top, #05f297 , hsba(265, 100%, 51%, 1));
+   /*-fx-background-color: radial-gradient(focus-distance 10%, center 0% 100%, radius 100%, #FFC107, #FF007F, #871191);*/
+   /* -fx-background-color: radial-gradient(focus-distance 0%, center 0% 100%, radius 100%, #FFC107, #FF8F00, #FF5722);*/
+
+}
+
+.Loginbtn {
+            /*-fx-background-color: #5A555F;*/
+            -fx-border-color: none;
+
+            -fx-border-radius: 40%;
+            -fx-background-color : none;
+           /* -fx-text-stroke: black; /* set the border color */
+          /*  -fx-text-stroke-width: 3px; /* set the border width */
+}
+

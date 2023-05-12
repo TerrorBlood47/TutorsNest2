@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@StudentDashBoard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.StudentHomeController">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="231.0">
+         <children>
+            <AnchorPane fx:id="student_side_anchorpane" prefHeight="800.0" prefWidth="246.0" styleClass="sidepane" stylesheets="@StudentDashBoard.css">
+               <children>
+                  <JFXButton fx:id="classroom" layoutX="12.0" layoutY="213.0" prefHeight="46.0" prefWidth="198.0" text="Classroom" textFill="#fcf5f5">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/studentDashBoard/classroom-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="hireTutors" layoutX="12.0" layoutY="288.0" prefHeight="46.0" prefWidth="198.0" text="Hire Tutors" textFill="#fcf5f5">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/studentDashBoard/search-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="inbox" layoutX="12.0" layoutY="363.0" prefHeight="46.0" prefWidth="198.0" text="Inbox" textFill="#fcf5f5">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/studentDashBoard/textbubble-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="payment" layoutX="14.0" layoutY="438.0" prefHeight="46.0" prefWidth="198.0" text="Payment" textFill="#fcf5f5">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/studentDashBoard/payment-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="logout" layoutX="12.0" layoutY="729.0" prefHeight="46.0" prefWidth="198.0" styleClass="btn_home" stylesheets="@applicationStudentDashboard.css" text="Logout" textFill="#fcf5f5">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/studentDashBoard/logout-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="home" layoutX="12.0" layoutY="138.0" prefHeight="46.0" prefWidth="198.0" styleClass="btn-selected" stylesheets="@StudentDashBoard.css" text="Home" textFill="#fcf5f5">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/studentDashBoard/home-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <effect>
+                  <Glow />
+               </effect>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="800.0" prefWidth="997.0">
+         <children>
+            <Label fx:id="inboxHead" alignment="CENTER" layoutX="259.0" layoutY="24.0" prefHeight="60.0" prefWidth="439.0" style="-fx-background-color: #544357; -fx-border-radius: 10px;" text="Welcome to your Dashboard!" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font></Label>
+            <TableView fx:id="teachersList" layoutX="217.0" layoutY="376.0" prefHeight="308.0" prefWidth="558.0">
+              <columns>
+                <TableColumn id="teacherNameField" fx:id="teacherNameField" prefWidth="258.0" style="-fx-background-color: #5eaa8a;" text="Teacher's Name" />
+                  <TableColumn id="mobileNumberField" fx:id="mobileNumberField" prefWidth="299.0" style="-fx-background-color: #e8f915;" text="Mobile Number" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="7.0" layoutY="304.0" prefHeight="60.0" prefWidth="965.0" text="Your Current Teacher's list is here :">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="175.0" prefHeight="31.0" prefWidth="217.0" text="Current Class :">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="319.0" layoutY="166.0" prefHeight="49.0" prefWidth="256.0" text="Current Institution :">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="632.0" layoutY="161.0" prefHeight="60.0" prefWidth="331.0" text="Total Teacher's Number :">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="studentClass" alignment="CENTER" layoutX="60.0" layoutY="209.0" prefHeight="49.0" prefWidth="144.0" style="-fx-font-weight: bold;" text="11">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="studentInstitute" alignment="CENTER" layoutX="282.0" layoutY="209.0" prefHeight="49.0" prefWidth="331.0" style="-fx-font-weight: bold;" text="Khulna Zilla School" textAlignment="CENTER">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="teacherNumber" alignment="CENTER" layoutX="690.0" layoutY="207.0" prefHeight="60.0" prefWidth="182.0" style="-fx-font-weight: bold;" text="0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

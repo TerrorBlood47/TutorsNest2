@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@teacherTemporaryDashBoard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.TeacherDashBoardController">
+   <children>
+      <ScrollPane layoutX="313.0" layoutY="147.0" prefHeight="643.0" prefWidth="874.0">
+         <content>
+            <Pane>
+               <TableView fx:id="studentsList" accessibleRole="PARENT" prefHeight="602.0" prefWidth="874.0" stylesheets="@teacherTemporaryDashBoard.css">
+                  <columns>
+                     <TableColumn fx:id="studentNameColumn" prefWidth="217.0" text="Student Name" />
+                     <TableColumn id="mobileNumberColumn" fx:id="mobileNumberColumn" prefWidth="235.0" text="Mobile Number" />
+                     <TableColumn prefWidth="208.0" text="Email" />
+                     <TableColumn prefWidth="213.0" text="Action" />
+                  </columns>
+               </TableView>
+            </Pane>
+         </content>
+      </ScrollPane>
+      <AnchorPane layoutX="-2.0" prefHeight="858.0" prefWidth="298.0" styleClass="sidepane" stylesheets="@teacherTemporaryDashBoard.css">
+         <children>
+            <AnchorPane layoutX="4.0" prefHeight="406.0" prefWidth="287.0" styleClass="innerpane" stylesheets="@teacherTemporaryDashBoard.css">
+               <children>
+                  <Label fx:id="topNameLabel" alignment="CENTER" layoutX="41.0" layoutY="317.0" prefHeight="36.0" prefWidth="205.0" text="fahim" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold Italic" size="21.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.47" />
+                     </effect>
+                  </Label>
+                  <ImageView fx:id="teacherImage" fitHeight="150.0" fitWidth="200.0" layoutX="69.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image fx:id="teacherImageSource" url="@images/1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </AnchorPane>
+            <Button fx:id="logoutButton" layoutX="74.0" layoutY="729.0" prefHeight="46.0" prefWidth="143.0" styleClass="buttons" stylesheets="@teacherTemporaryDashBoard.css" text="LOGOUT" textFill="WHITE" />
+            <Label layoutX="20.0" layoutY="582.0" prefHeight="25.0" prefWidth="241.0" text="Mobile Phone" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="mobileField" layoutX="12.0" layoutY="614.0" prefHeight="33.0" prefWidth="241.0" text="+961 xx-xxx-xxx" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="25.0" layoutY="500.0" prefHeight="25.0" prefWidth="241.0" text="Email" textFill="#f2ecec">
+               <font>
+                  <Font name="Corbel Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="emailField" layoutX="20.0" layoutY="531.0" prefHeight="33.0" prefWidth="260.0" text="azmainfaiak45@gmail.com" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="profileButton" layoutX="1073.0" layoutY="22.0" prefHeight="58.0" prefWidth="63.0" style="-fx-background-color: blue;">
+         <children>
+            <Label fx:id="namesFirstCharacter" alignment="CENTER" layoutX="7.0" layoutY="6.0" prefHeight="46.0" prefWidth="50.0" text="S" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="nameUnderProfileButton" contentDisplay="CENTER" layoutX="1020.0" layoutY="89.0" prefHeight="16.0" prefWidth="158.0" text="NAMEOFTHEUSER" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

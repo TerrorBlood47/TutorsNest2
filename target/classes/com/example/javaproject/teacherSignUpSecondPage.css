@@ -1,0 +1,45 @@
+#signUpBtn {
+    -fx-background-color: #FF5511;
+    -fx-border: none;
+    -fx-color: black;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-cursor: pointer;
+    -fx-border-radius: 25px;
+}
+
+.bgpane{
+ -fx-background-color: linear-gradient(to bottom right, #05f297  , hsba(265, 100%, 51%, 1) 90%);
+}
+
+.innerpane{
+    -fx-border-color : white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 12%;
+    -fx-background-color: none;
+}
+
+
+.textfield{
+    -fx-background-color: none;
+    -fx-border-color: white;
+   /* -fx-border-style: none none solid none;*/
+    -fx-border-width : 0px 0px 1px 0px;
+    -fx-text-fill: white;
+}
+
+
+.menuButton{
+    -fx-font-fill: white;
+   /* -fx-background-color:  linear-gradient(to bottom right, hsba(0, 100%, 100%, 1)  , hsba(265, 100%, 51%, 1) );*/
+    -fx-font-fill: white;
+}
+
+.signUpBtn {
+     -fx-background-color: linear-gradient(to top right,  hsba(0, 100%, 51%, 1)  , hsba(265, 100%, 51%, 1) );
+    -fx-border-color: none;
+    -fx-text-align: center;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 20 20 20 20;
+}

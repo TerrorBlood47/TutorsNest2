@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@teacherSignUpSecondPage.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.TeacherSignUpController2">
+   <children>
+      <AnchorPane layoutX="114.0" layoutY="47.0" prefHeight="674.0" prefWidth="982.0" styleClass="innerpane" stylesheets="@teacherSignUpSecondPage.css">
+         <children>
+            <SplitMenuButton fx:id="tuitionAreaField" layoutX="680.0" layoutY="475.0" mnemonicParsing="false" onAction="#tuitionAreaSelected" style="-fx-border-color: white; -fx-border-width: 0; -fx-border-radius: 10px;" text="Your Preferred Tuition Area">
+              <items>
+                <MenuItem id="mohammadpur" fx:id="mohammadpur" mnemonicParsing="false" onAction="#mohammadpurSelected" text="Mohammadpur" />
+                  <MenuItem id="motijheel" fx:id="motijheel" mnemonicParsing="false" onAction="#motijheelSelected" text="Motijheel" />
+                  <MenuItem id="dhanmondi" fx:id="dhanmondi" mnemonicParsing="false" onAction="#dhanmondiSelected" text="Dhanmondi" />
+                  <MenuItem id="mirpur" fx:id="mirpur" mnemonicParsing="false" onAction="#mirpurSelected" text="Mirpur" />
+                  <MenuItem id="gulshan" fx:id="gulshan" mnemonicParsing="false" onAction="#gulshanSelected" text="Gulshan" />
+                  <MenuItem id="banani" fx:id="banani" mnemonicParsing="false" onAction="#bananiSelected" text="Banani" />
+              </items>
+               <font>
+                  <Font name="Laksaman" size="16.0" />
+               </font>
+            </SplitMenuButton>
+            <SplitMenuButton fx:id="salaryRangeField" layoutX="378.0" layoutY="476.0" mnemonicParsing="false" onAction="#salarySelected" prefHeight="36.0" prefWidth="206.0" text="Expected Salary">
+              <items>
+                <MenuItem id="sixToEight" mnemonicParsing="false" onAction="#sixToEightSelected" text="6000 - 8000 Tk" />
+                  <MenuItem id="eightToTen" mnemonicParsing="false" onAction="#eightToTenSelected" text="8000 - 10000 Tk" />
+                  <MenuItem id="tenToTwelve" mnemonicParsing="false" onAction="#tenToTwelveSelected" text="10000 - 12000 Tk" />
+                  <MenuItem id="twelveToFifteen" mnemonicParsing="false" onAction="#twelveToFifteenSelected" text="12000 - 15000 Tk" />
+      
+              </items>
+               <font>
+                  <Font name="Laksaman" size="15.0" />
+               </font>
+            </SplitMenuButton>
+            <Label textFill="WHITE">
+               <font>
+                  <Font name="Laksaman" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="institutionField" layoutX="313.0" layoutY="368.0" prefHeight="40.0" prefWidth="367.0" promptText="Your Institution" styleClass="textfield" stylesheets="@teacherSignUpSecondPage.css">
+               <font>
+                  <Font name="Laksaman" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="departmentField" layoutX="315.0" layoutY="279.0" prefHeight="39.0" prefWidth="366.0" promptText="Department" styleClass="textfield" stylesheets="@teacherSignUpSecondPage.css">
+               <font>
+                  <Font name="Laksaman" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="cgpaField" layoutX="316.0" layoutY="211.0" prefHeight="36.0" prefWidth="364.0" promptText="CGPA" styleClass="textfield" stylesheets="@teacherSignUpSecondPage.css">
+               <font>
+                  <Font name="Laksaman" size="13.0" />
+               </font>
+            </TextField>
+            <SplitMenuButton fx:id="preferredSubjectField" layoutX="77.0" layoutY="476.0" mnemonicParsing="false" onAction="#preferredSubjectSelected" prefHeight="43.0" prefWidth="188.0" styleClass="menuButton" stylesheets="@teacherSignUpSecondPage.css" text="Preferred Subject">
+              <items>
+                <MenuItem id="mathematics" mnemonicParsing="false" onAction="#mathematicsSelected" text="Mathematics" />
+                  <MenuItem id="physics" mnemonicParsing="false" onAction="#physicsSelected" text="Physics" />
+                  <MenuItem id="chemistry" mnemonicParsing="false" onAction="#chemistrySelected" text="Chemistry" />
+                  <MenuItem id="biology" mnemonicParsing="false" onAction="#biologySelected" text="Biology" />
+      
+              </items>
+               <font>
+                  <Font name="Laksaman" size="15.0" />
+               </font>
+            </SplitMenuButton>
+            <TextField fx:id="currentYearField" layoutX="314.0" layoutY="142.0" prefHeight="36.0" prefWidth="367.0" promptText="Current Year of Study" styleClass="textfield" stylesheets="@teacherSignUpSecondPage.css" />
+            <JFXButton layoutX="397.0" layoutY="574.0" onAction="#teacherSignUpClicked" prefHeight="37.0" prefWidth="188.0" styleClass="signUpBtn" stylesheets="@teacherSignUpSecondPage.css" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <Glow level="0.34" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

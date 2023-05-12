@@ -1,0 +1,26 @@
+
+
+.bgpane{
+ /*-fx-background-color: linear-gradient(to top right, #05f297  , hsba(265, 100%, 51%, 1) 90%);*/
+
+ -fx-background-color: white;
+
+}
+
+.sidepane{
+    -fx-background-color: linear-gradient(to top right, #05f297  , hsba(265, 100%, 51%, 1) 90%);
+}
+
+
+
+.buttons{
+    -fx-background-color: linear-gradient(to top right,  hsba(0, 100%, 51%, 1)  , hsba(265, 100%, 51%, 1) );
+    -fx-border-color: none;
+
+    -fx-background-radius: 20 20 20 20;
+}
+
+.innerpane{
+    -fx-background-color: linear-gradient(to top right,  hsba(240, 100%, 51%, 1)  , hsba(180, 100%, 51%, 1) );
+    -fx-background-radius: 20 20;
+}

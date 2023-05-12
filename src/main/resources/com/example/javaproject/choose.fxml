@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@ChooseScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.chooseScreenController">
+   <children>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="159.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose What Are You" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Malgun Gothic Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="chooseTeacherButton" layoutX="331.0" layoutY="434.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="178.0" styleClass="buttons" stylesheets="@ChooseScreen.css" text="Teacher" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="chooseStudentButton" layoutX="93.0" layoutY="434.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="178.0" styleClass="buttons" stylesheets="@ChooseScreen.css" text="Student" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="490.0" fitWidth="525.0" layoutX="604.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Model5%20.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="600.0" layoutY="532.0" prefHeight="198.0" prefWidth="562.0" text="Tutor's Nest is a user-friendly, secure and innovative online platform that connects students and teachers from around the world. Our platform provides students with access to top-notch educators who are experts in their fields, offering personalized learning experiences to help students reach their full potential. Teachers can showcase their skills, share their knowledge and grow their career, while students can get the academic support they need to achieve their goals." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Laksaman" size="13.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <Glow level="0.27" />
+   </effect>
+</AnchorPane>
