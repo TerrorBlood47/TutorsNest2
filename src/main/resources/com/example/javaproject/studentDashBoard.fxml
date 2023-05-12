@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.Glow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<?import com.jfoenix.controls.JFXButton?>
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@StudentDashBoard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.StudentHomeController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="bgpane" stylesheets="@StudentDashBoard.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaproject.StudentHomeController">
    <children>
       <VBox prefHeight="800.0" prefWidth="231.0">
          <children>
@@ -104,10 +98,10 @@
                <font>
                   <Font size="23.0" />
                </font></Label>
-            <TableView fx:id="teachersList" layoutX="217.0" layoutY="376.0" prefHeight="308.0" prefWidth="558.0">
+            <TableView fx:id="teachersList" layoutX="217.0" layoutY="376.0" onMouseClicked="#onRowDoubleClicked" prefHeight="308.0" prefWidth="558.0">
               <columns>
                 <TableColumn id="teacherNameField" fx:id="teacherNameField" prefWidth="258.0" style="-fx-background-color: #5eaa8a;" text="Teacher's Name" />
-                  <TableColumn id="mobileNumberField" fx:id="mobileNumberField" prefWidth="299.0" style="-fx-background-color: #e8f915;" text="Mobile Number" />
+                  <TableColumn id="mobileNumberField" fx:id="mobileNumberField" prefWidth="299.0" style="-fx-background-color: #ffaacc;" text="Mobile Number" />
               </columns>
             </TableView>
             <Label alignment="CENTER" layoutX="7.0" layoutY="304.0" prefHeight="60.0" prefWidth="965.0" text="Your Current Teacher's list is here :">

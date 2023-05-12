@@ -4,15 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.Node;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 
 import java.net.URL;
 import java.util.Random;
@@ -48,6 +49,10 @@ public class TeacherDashBoardController implements Initializable {
     private Label nameUnderProfileButton;
     @FXML
     private ImageView teacherImage;
+    protected Student studentSelected;
+    private String[] messages;
+    private TextField teacherMessage = new TextField();
+
 
 
     @Override
@@ -87,6 +92,78 @@ public class TeacherDashBoardController implements Initializable {
     }
 
 
+    public void onRowDoubleClicked(MouseEvent mouseEvent) {
+
+        studentSelected = studentsList.getSelectionModel().getSelectedItem();
+        Dialog dialog = new Dialog();
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.OK);
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.CANCEL);
+        Button okButton = (Button) dialog.getDialogPane().lookupButton(ButtonType.OK);
+        okButton.setText("Send Message");
+
+        dialog.getDialogPane().setPrefWidth(800);
+        dialog.getDialogPane().setPrefHeight(700);
+        dialog.show();
+        String studentName = studentSelected.lastname;
+        String mail = emailField.getText();
+        String teacherName = TutorsNestUtils.identifyStudent(mail, null);
+        messages = TutorsNestUtils.retrieveMessage(teacherName, studentName, false);
+        System.out.println(messages[0]);
+        System.out.println(messages[1]);
+        dialog.getDialogPane().setContent(showCustomView());
+
+        okButton.setOnAction( e -> {
+            TutorsNestUtils.saveMessage(teacherName, studentName, "No response yet", teacherMessage.getText());
+            teacherMessage.setText("");
+            teacherMessage.setPromptText("Write your messages here");
+        });
+    }
+    private Node showCustomView() {
+        GridPane gridPane = new GridPane();
+        gridPane.setMinHeight(600.0);
+        gridPane.setMinWidth(600.0);
+        gridPane.setHgap(2.0);
+        gridPane.setVgap(3.0);
+        gridPane.setMaxHeight(700.0);
+        gridPane.setMaxWidth(800.0);
 
 
+        Label nameLabel = new Label("Your student's Message : ");
+        nameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 26));
+        nameLabel.setPrefWidth(600);
+        nameLabel.setPrefHeight(50);
+        nameLabel.setMinWidth(600);
+        gridPane.add(nameLabel, 0, 0);
+
+        Label universityLabel = new Label(messages[1]);
+        universityLabel.setFont(Font.font("Arial", 20));
+        universityLabel.setPrefWidth(600);
+        universityLabel.setPrefHeight(100);
+        universityLabel.setMinWidth(600);
+        gridPane.add(universityLabel, 0, 1);
+
+        Label departmentLabel = new Label("Your Response :");
+        departmentLabel.setFont(Font.font("Arial", FontWeight.BOLD , 26));
+        departmentLabel.setPrefWidth(600);
+        departmentLabel.setPrefHeight(50);
+        departmentLabel.setMinWidth(600);
+        gridPane.add(departmentLabel, 0, 3);
+
+        Label yearLabel = new Label(messages[0]);
+        yearLabel.setFont(Font.font("Arial", 20));
+        yearLabel.setPrefWidth(600);
+        yearLabel.setPrefHeight(100);
+        yearLabel.setMinWidth(600);
+        gridPane.add(yearLabel, 0, 4);
+
+        teacherMessage.setPrefHeight(200);
+        teacherMessage.setPrefWidth(600);
+        teacherMessage.setPromptText("Write your messages here");
+        gridPane.add(teacherMessage, 0, 5);
+
+
+
+
+        return gridPane;
+    }
 }

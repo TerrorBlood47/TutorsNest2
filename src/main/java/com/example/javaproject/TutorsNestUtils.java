@@ -418,6 +418,32 @@ public class TutorsNestUtils { //A utility class
         return number;
     }
 
+    public static String getTeacherPhoneNumber(String name) {
+        String number = "";
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(url, username, databasePassword);
+            statement = connection.prepareStatement("SELECT phoneNumber, firstName, lastName FROM teacher_primary_information");
+
+            resultSet = statement.executeQuery();
+            if(!resultSet.isBeforeFirst()){
+                System.out.println("Database is empty");
+            }
+            else {
+                while(resultSet.next()) {
+                    String retrievedNumber = resultSet.getString("phoneNumber");
+                    String retrievedName = resultSet.getString("firstName") + " " + resultSet.getString("lastName");
+                    if(retrievedName.equals(name)){
+                        number = retrievedNumber;
+                    }
+                }
+            }
+        }
+        catch (Exception e) {
+            System.out.println("No Connection");
+        }
+        return number;
+    }
 
 
 
@@ -517,7 +543,6 @@ public class TutorsNestUtils { //A utility class
                     String retrievedTeacherName = resultSet.getString("teacher_name");
                     String retrievedStudentName = resultSet.getString("student_name");
 
-                    //System.out.println(retrievedStudentName + " dasds");
                     String retrievedPhoneNumber = resultSet.getString("phoneNumber");
                     if (retrievedTeacherName.equals(teacherName)) {
                         students.add(new Student(retrievedStudentName, retrievedPhoneNumber));
@@ -556,6 +581,7 @@ public class TutorsNestUtils { //A utility class
 
                     String retrievedPhoneNumber = resultSet.getString("phoneNumber");
                     if (retrievedStudentName.equals(studentName)) {
+                        System.out.println(retrievedPhoneNumber + " " + retrievedTeacherName);
                         teachers.add(new Teacher(retrievedTeacherName, retrievedPhoneNumber));
                     }
                 }
@@ -605,23 +631,18 @@ public class TutorsNestUtils { //A utility class
         }
         return messages;
     }
-    public static void saveMessage(String teacherName, String studentName, String message, boolean isStudent) {
+    public static void saveMessage(String teacherName, String studentName, String studentMessage, String teacherMessage) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(url, username, databasePassword);
             String sql;
-            if (isStudent == true) {
-                sql = "INSERT INTO teacher_student_messaging (teacher_name, student_name, student_message) VALUES (?, ?, ?)";
-            }
-            else {
-                sql = "INSERT INTO teacher_student_messaging (teacher_name, student_name, teacher_message) VALUES (?, ?, ?)";
-            }
-
+            sql = "INSERT INTO teacher_student_messaging (teacher_name, student_name, student_message, teacher_message) VALUES (?, ?, ?, ?)";
             try {
                 statement = connection.prepareStatement(sql);
                 statement.setString(1, teacherName);
                 statement.setString(2, studentName);
-                statement.setString(3, message);
+                statement.setString(3, studentMessage);
+                statement.setString(4, teacherMessage);
                 statement.executeUpdate();
 
             } catch (SQLException e) {
@@ -635,7 +656,25 @@ public class TutorsNestUtils { //A utility class
 
     }
 
+    public static void removeTeacher(String mobileNumber) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection(url, username, databasePassword);
+            String sql;
+            sql = "DELETE from teacher_student WHERE phoneNumber = " + mobileNumber;
+            try {
+                statement = connection.prepareStatement(sql);
+                statement.executeUpdate();
 
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
+        catch (Exception e) {
+
+        }
+    }
 
 
 

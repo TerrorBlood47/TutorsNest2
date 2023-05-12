@@ -42,7 +42,7 @@ public class Teacher  extends Person implements TeacherInterface{
         this.year = year;
     }
 
-    public Teacher(String firstname, String lastname,String email, String password, String mobileNumber,String university, String department, String cgpa, String year) {
+    public Teacher(String firstname, String lastname, String email, String password, String mobileNumber,String university, String department, String cgpa, String year) {
         super(firstname, lastname,email, password, mobileNumber);
         this.university = university;
         this.department = department;
@@ -52,7 +52,7 @@ public class Teacher  extends Person implements TeacherInterface{
 
     public Teacher(String name,String university, String department, String cgpa, String year) {
         super();
-        //this.firstname = name;///////ekhane firstname o pathaite hobe
+        this.firstname = name;
         this.lastname = name;
         this.university = university;
         this.department = department;
@@ -61,14 +61,13 @@ public class Teacher  extends Person implements TeacherInterface{
     }
     public Teacher(String name, String mobileNumber) {
         super();
-        //this.firstname = name;///////ekhane firstname o pathaite hobe
+        this.firstname = name;
         this.lastname = name;
         this.mobileNumber = mobileNumber;
-        System.out.println(lastname);
     }
     public Teacher(String firstname ,String lastname,String university, String department, String cgpa, String year) {
         super();
-        this.firstname = firstname;///////ekhane firstname o pathaite hobe
+        this.firstname = firstname;
         this.lastname = lastname;
         this.university = university;
         this.department = department;
@@ -81,6 +80,7 @@ public class Teacher  extends Person implements TeacherInterface{
     private String year;
     private String mobileNumber;
 
+
     @Override
     public String getMobileNumber() {
         return mobileNumber;
@@ -92,7 +92,7 @@ public class Teacher  extends Person implements TeacherInterface{
     }
 
     public String getName() {
-        return lastname;
+        return this.getFirstname() + " " + getLastname();
     }
 
 }

@@ -2,7 +2,7 @@ package com.example.javaproject;
 
 public class StudentDashboard {
 
-    protected String prefTuitionArea;     /////pore private banaite hobe
+    protected String prefTuitionArea;
     protected String salary;
     protected String prefSubject;
     protected Teacher teacherSelected;

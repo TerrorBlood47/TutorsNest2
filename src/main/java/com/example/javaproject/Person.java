@@ -19,7 +19,6 @@ public class Person { //an abstract class
         }
 
         public Person(String name, String phonenumber) {
-
                 this.lastname = name;
                 this.mobileNumber = phonenumber;
         }

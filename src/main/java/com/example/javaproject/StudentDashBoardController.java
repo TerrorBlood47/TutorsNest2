@@ -233,7 +233,7 @@ public class StudentDashBoardController extends StudentDashboard implements Init
         okButton.setOnAction( e -> {
             System.out.println(teacherSelected.getName());
             System.out.println(topNameLabel.getText());
-            String phoneNumber = TutorsNestUtils.getPhoneNumber(topNameLabel.getText());
+            String phoneNumber = TutorsNestUtils.getTeacherPhoneNumber(teacherSelected.getFirstname());
             connect( teacherSelected.getName(), topNameLabel.getText(), phoneNumber);
         });
 
@@ -247,7 +247,7 @@ public class StudentDashBoardController extends StudentDashboard implements Init
         gridPane.setVgap(3.0);
 
 
-        Label nameLabel = new Label(teacherSelected.getName());
+        Label nameLabel = new Label(teacherSelected.getFirstname());
         nameLabel.setFont(Font.font("Arial", FontWeight.BOLD, 26)); // set font size to 16
         gridPane.add(nameLabel, 0, 0);
 
@@ -266,15 +266,6 @@ public class StudentDashBoardController extends StudentDashboard implements Init
         Label cgpaLabel = new Label("Current CGPA : " + teacherSelected.getCgpa());
         cgpaLabel.setFont(Font.font("Arial", 20)); // set font size to 14
         gridPane.add(cgpaLabel, 0, 3);
-
-//        Label prefTuition = new Label("Preferred Tuition Area : " + prefTuitionArea);
-//        prefTuition.setFont(Font.font("Arial", 24)); // set font size to 14
-//        gridPane.add(prefTuition, 0, 4);
-//
-//        Label preferredSubject = new Label("Preferred Subject of Teaching : " + prefSubject);
-//        preferredSubject.setFont(Font.font("Arial", 24)); // set font size to 14
-//        gridPane.add(preferredSubject, 0, 4);
-
 
         return gridPane;
     }

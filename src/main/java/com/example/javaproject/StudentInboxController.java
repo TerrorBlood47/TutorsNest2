@@ -1,5 +1,6 @@
 package com.example.javaproject;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -37,7 +38,10 @@ public class StudentInboxController implements Initializable {
     private Label inboxHead;
     @FXML
     private TextField studentTextField;
+    @FXML
+    private Label teacherResponse;
     protected Teacher teacherSelected;
+
 
 
     @Override
@@ -54,6 +58,20 @@ public class StudentInboxController implements Initializable {
         String studentEmail = LoginScreenController.LoginEmailInput;
         String[] studentName = TutorsNestUtils.identifyStudent(studentEmail);
         String[] messages = TutorsNestUtils.retrieveMessage(teacherSelected.getName(), studentName[0],true);
-        inboxHead.setText(messages[0]);
+        inboxHead.setText(messages[1]);
+        teacherResponse.setText(messages[0]);
+    }
+
+    public void messageSendMethod(ActionEvent event) {
+        teacherSelected = teacherInbox.getSelectionModel().getSelectedItem();
+        String studentEmail = LoginScreenController.LoginEmailInput;
+        String[] studentName = TutorsNestUtils.identifyStudent(studentEmail);
+        String studentMessage = studentTextField.getText();
+        String teacherMessage = "No response yet";
+        TutorsNestUtils.saveMessage(teacherSelected.lastname, studentName[0], studentMessage, teacherMessage);
+        String[] messages = TutorsNestUtils.retrieveMessage(teacherSelected.lastname, studentName[0],true);
+        inboxHead.setText(messages[1]);
+        teacherResponse.setText(messages[0]);
+        studentTextField.setText("");
     }
 }

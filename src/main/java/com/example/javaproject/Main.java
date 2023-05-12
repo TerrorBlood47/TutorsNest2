@@ -13,9 +13,6 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("letsGetStarted.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 800);
-       // String css = this.getClass().getResource("letsGetStarted.css").toExternalForm();
-        //scene.getStylesheets().add(css);
-//        Parent root  = FXMLLoader.load(getClass().getResource("letsGetStarted.fxml"));
 
         stage.setTitle("Tutor's Nest");
          try {
