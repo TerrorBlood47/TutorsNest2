@@ -11,12 +11,11 @@ public class DataHandler {
         PreparedStatement userInsert = null;
         PreparedStatement finduser = null;
         ResultSet resultSet = null;
-        String username = "fahim";
-        String url = "jdbc:mysql://127.0.0.1:3306/project";
-        String databasePassword = "Baba733700!@#$%";
+
+        String url = "jdbc:mysql://" + DataHub.Host + ":" + DataHub.Port_number + "/" + DataHub.Database_name;
 
         try{
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             finduser = connection.prepareStatement("SELECT * FROM users WHERE email = ?");
             finduser.setString(1,email );
 

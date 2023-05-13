@@ -7,6 +7,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -25,7 +27,10 @@ public class TeacherProfileController implements Initializable {
     @FXML
     private TextField PhoneNumber;
     @FXML
-    private Button SaveButton;
+    private Button saveButton;
+
+    @FXML
+    private Button backButton;
 
     private String firstName;
     private String lastName;
@@ -40,11 +45,17 @@ public class TeacherProfileController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-            SaveButton.setOnAction(new EventHandler<ActionEvent>() {
+        saveButton.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     //DataHandler.EditProfileForTeacherPrimary(actionEvent,);
                 }
             });
+        backButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                TutorsNestUtils.switchScene(event,"teacherTemporaryDashBoard.fxml","DashBoard", LoginScreenController.LoginEmailInput, null);
+            }
+        });
     }
 }

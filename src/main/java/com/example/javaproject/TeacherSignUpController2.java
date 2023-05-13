@@ -13,9 +13,8 @@ import java.sql.SQLException;
 
 public class TeacherSignUpController2 {
 
-    String username = "fahim";
-    String url = "jdbc:mysql://127.0.0.1:3306/project";
-    String databasePassword = "Baba733700!@#$%";
+    String url = "jdbc:mysql://" + DataHub.Host + ":" + DataHub.Port_number + "/" + DataHub.Database_name;
+
     private Connection connection;
     private PreparedStatement statement;
     private String prefTuitionArea;
@@ -49,7 +48,7 @@ public class TeacherSignUpController2 {
     @FXML
     void teacherSignUpClicked(ActionEvent event) {
         connect();
-        TutorsNestUtils.switchScene(event,"teacherTemporaryDashBoard.fxml","Home");
+        TutorsNestUtils.switchScene(event,"Login.fxml","Login");
     }
     @FXML
     void preferredSubjectSelected(ActionEvent event) {
@@ -153,7 +152,7 @@ public class TeacherSignUpController2 {
     public void connect() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             String sql = "INSERT INTO teacher_secondary_information (institution, department, cgpa, currYearOfStudy, prefTuitionArea, prefSubject, salary) VALUES (?, ?, ?, ?, ?, ?, ?)";
             String institution = institutionField.getText();
             String department = departmentField.getText();

@@ -12,9 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class TeacherSignUpController {
-    String username = "fahim";
-    String url = "jdbc:mysql://127.0.0.1:3306/project";
-    String databasePassword = "Baba733700!@#$%";
+    String url = "jdbc:mysql://" + DataHub.Host + ":" + DataHub.Port_number + "/" + DataHub.Database_name;
     private Connection connection;
     private PreparedStatement statement;
 
@@ -44,7 +42,7 @@ public class TeacherSignUpController {
     public void connect() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             String sql = "INSERT INTO teacher_primary_information (firstName, lastName, email, teacherPassword, phoneNumber) VALUES (?, ?, ?, ?, ?)";
             String firstName = firstNameField.getText();
             String lastName = lastNameField.getText();

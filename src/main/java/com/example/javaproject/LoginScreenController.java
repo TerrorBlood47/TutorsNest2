@@ -39,7 +39,7 @@ public class LoginScreenController {
         else {
             Boolean ans = TutorsNestUtils.identifyStudent(emailInput.getText(), passwordInput.getText(), false);
             if (ans) {
-                TutorsNestUtils.switchScene(event,"teacherTemporaryDashBoard.fxml","Hire Tutors", emailInput.getText(), null);
+                TutorsNestUtils.switchScene(event,"teacherTemporaryDashBoard.fxml","DashBoard", emailInput.getText(), null);
             }
             else {
                 System.out.println("No user found with the given information");

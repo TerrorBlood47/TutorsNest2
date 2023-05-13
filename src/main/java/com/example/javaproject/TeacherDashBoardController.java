@@ -64,13 +64,13 @@ public class TeacherDashBoardController implements Initializable {
                 }
             });
 
-            profileButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent mouseEvent) {
-                    TutorsNestUtils.switchSceneViaMouseEvent(mouseEvent,"TeacherProfile.fxml","Profile",null,null,null);
-                }
-
-            });
+//            profileButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+//                @Override
+//                public void handle(MouseEvent mouseEvent) {
+//                    TutorsNestUtils.switchSceneViaMouseEvent(mouseEvent,"TeacherProfile.fxml","Profile",null,null,null);
+//                }
+//
+//            });
 
     }
     public void displayName(String name, String email, String phoneNumber) {

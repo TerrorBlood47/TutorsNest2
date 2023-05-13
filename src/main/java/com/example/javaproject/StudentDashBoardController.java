@@ -20,9 +20,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class StudentDashBoardController extends StudentDashboard implements Initializable {
-    String username = "fahim";
-    String url = "jdbc:mysql://127.0.0.1:3306/project";
-    String databasePassword = "Baba733700!@#$%";
+    String url = "jdbc:mysql://" + DataHub.Host + ":" + DataHub.Port_number + "/" + DataHub.Database_name;
     static Connection connection;
     static PreparedStatement statement;
 
@@ -289,7 +287,7 @@ public class StudentDashBoardController extends StudentDashboard implements Init
     public void connect(String teacherName, String studentName, String phoneNumber) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             String sql = "INSERT INTO teacher_student (teacher_name, student_name, phoneNumber) VALUES (?, ?, ?)";
             try {
                 statement = connection.prepareStatement(sql);

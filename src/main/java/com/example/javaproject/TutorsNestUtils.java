@@ -17,10 +17,8 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Random;
 
-public class TutorsNestUtils { //A utility class
-    static String username = "fahim";
-    static String url = "jdbc:mysql://127.0.0.1:3306/project";
-    static String databasePassword = "Baba733700!@#$%";
+public class TutorsNestUtils {
+    static String url = "jdbc:mysql://" + DataHub.Host + ":" + DataHub.Port_number + "/" + DataHub.Database_name;
     static Connection connection;
     static PreparedStatement statement;
     static ResultSet resultSet;
@@ -262,7 +260,7 @@ public class TutorsNestUtils { //A utility class
         Boolean flag = false;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             if (isStudent) {
                 statement = connection.prepareStatement("SELECT email, studentPassword FROM student_information");
             }
@@ -306,7 +304,7 @@ public class TutorsNestUtils { //A utility class
         String[] studentInformation = new String[5];
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = connection.prepareStatement("SELECT email, firstName, lastName, institution, class FROM student_information");
 
             resultSet = statement.executeQuery();
@@ -340,7 +338,8 @@ public class TutorsNestUtils { //A utility class
         String phoneNumber = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
+
             statement = connection.prepareStatement("SELECT email, phoneNumber FROM teacher_primary_information");
 
             resultSet = statement.executeQuery();
@@ -368,7 +367,7 @@ public class TutorsNestUtils { //A utility class
         String name = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = connection.prepareStatement("SELECT email, firstName, lastName FROM teacher_primary_information");
 
             resultSet = statement.executeQuery();
@@ -395,7 +394,7 @@ public class TutorsNestUtils { //A utility class
         String number = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = connection.prepareStatement("SELECT phoneNumber, firstName, lastName FROM student_information");
 
             resultSet = statement.executeQuery();
@@ -422,7 +421,7 @@ public class TutorsNestUtils { //A utility class
         String number = "";
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = connection.prepareStatement("SELECT phoneNumber, firstName, lastName FROM teacher_primary_information");
 
             resultSet = statement.executeQuery();
@@ -453,7 +452,7 @@ public class TutorsNestUtils { //A utility class
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = null;
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = null;
             String val = "SELECT firstName, lastName, institution, department, cgpa, currYearOfStudy, prefTuitionArea, prefSubject, salary FROM teacher_primary_information JOIN teacher_secondary_information ON teacher_secondary_information.id = teacher_primary_information.id";
             statement = connection.prepareStatement(val);
@@ -488,7 +487,7 @@ public class TutorsNestUtils { //A utility class
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = null;
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = null;
             String val = "SELECT firstName, lastName, institution, department, cgpa, currYearOfStudy, prefTuitionArea, prefSubject, salary FROM teacher_primary_information JOIN teacher_secondary_information ON teacher_secondary_information.id = teacher_primary_information.id";
             statement = connection.prepareStatement(val);
@@ -529,7 +528,7 @@ public class TutorsNestUtils { //A utility class
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = null;
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = null;
             String val = "SELECT teacher_name, student_name, phoneNumber FROM teacher_student";
             statement = connection.prepareStatement(val);
@@ -564,7 +563,7 @@ public class TutorsNestUtils { //A utility class
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = null;
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = null;
             String val = "SELECT teacher_name, student_name, phoneNumber FROM teacher_student";
             statement = connection.prepareStatement(val);
@@ -600,7 +599,7 @@ public class TutorsNestUtils { //A utility class
         boolean flag = false;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = connection.prepareStatement("SELECT * FROM teacher_student_messaging");
 
             resultSet = statement.executeQuery();
@@ -634,7 +633,7 @@ public class TutorsNestUtils { //A utility class
     public static void saveMessage(String teacherName, String studentName, String studentMessage, String teacherMessage) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             String sql;
             sql = "INSERT INTO teacher_student_messaging (teacher_name, student_name, student_message, teacher_message) VALUES (?, ?, ?, ?)";
             try {
@@ -659,7 +658,7 @@ public class TutorsNestUtils { //A utility class
     public static void removeTeacher(String mobileNumber) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             String sql;
             sql = "DELETE from teacher_student WHERE phoneNumber = " + mobileNumber;
             try {
@@ -679,7 +678,7 @@ public class TutorsNestUtils { //A utility class
     public static void updateClassSchedule(String email, String subject1, String subject2, String subject3, String subject4, String subject5, String subject6, String time1, String time2, String time3, String time4, String time5, String time6) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             try {
                 System.out.println(subject3 + " " + time4);
                 String sql = "INSERT INTO classroom_schedule (email, subject1, subject2, subject3, subject4, subject5, subject6, time1, time2, time3, time4, time5, time6) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -714,7 +713,7 @@ public class TutorsNestUtils { //A utility class
         boolean flag = false;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, username, databasePassword);
+            connection = DriverManager.getConnection(url, DataHub.Database_user, DataHub.Database_password);
             statement = connection.prepareStatement("SELECT * FROM classroom_schedule WHERE email = ? ");
             statement.setString(1, email);
 
