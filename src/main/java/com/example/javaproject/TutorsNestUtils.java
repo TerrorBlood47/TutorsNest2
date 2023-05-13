@@ -444,9 +444,6 @@ public class TutorsNestUtils {
         return number;
     }
 
-
-
-
     public static ObservableList<Teacher> getTeachersList() {
         ObservableList<Teacher> teachers = FXCollections.observableArrayList();
         try {
@@ -542,8 +539,9 @@ public class TutorsNestUtils {
                     String retrievedTeacherName = resultSet.getString("teacher_name");
                     String retrievedStudentName = resultSet.getString("student_name");
 
-                    String retrievedPhoneNumber = resultSet.getString("phoneNumber");
+                    String retrievedTeacherPhoneNumber = resultSet.getString("phoneNumber");
                     if (retrievedTeacherName.equals(teacherName)) {
+                        String retrievedPhoneNumber = TutorsNestUtils.getPhoneNumber(retrievedStudentName);
                         students.add(new Student(retrievedStudentName, retrievedPhoneNumber));
                     }
                 }
