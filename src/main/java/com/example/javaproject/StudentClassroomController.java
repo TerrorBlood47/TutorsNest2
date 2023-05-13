@@ -160,61 +160,73 @@ public class StudentClassroomController implements Initializable {
                 TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("subject2")) {
                 TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), textField.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("subject3")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), textField.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), textField.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("subject4")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), textField.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), subject3.getText(), textField.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("subject5")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), subject4.getText(), textField.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), subject3.getText(), subject4.getText(), textField.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("subject6")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), textField.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), textField.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("time1")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), textField.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), textField.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("time2")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), textField.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), textField.getText(), time3.getText(), time4.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("time3")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), textField.getText(), time4.getText(), time5.getText(), time6.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), textField.getText(), time4.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("time4")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), textField.getText(), time5.getText(), time6.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), textField.getText(), time5.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("time5")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), textField.getText(), time6.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), textField.getText(), time6.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
             else if(label.getId().equals("time6")) {
-                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, textField.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), textField.getText());
+                TutorsNestUtils.updateClassSchedule(LoginScreenController.LoginEmailInput, subject1.getText(), subject2.getText(), subject3.getText(), subject4.getText(), subject5.getText(), subject6.getText(), time1.getText(), time2.getText(), time3.getText(), time4.getText(), time5.getText(), textField.getText());
                 String[] information = TutorsNestUtils.retrieveClassSchedule(LoginScreenController.LoginEmailInput);
                 setEverything(information);
+                textField.setText("");
             }
         });
 
@@ -249,6 +261,5 @@ public class StudentClassroomController implements Initializable {
         time4.setText(information[9]);
         time5.setText(information[10]);
         time6.setText(information[11]);
-
     }
 }
