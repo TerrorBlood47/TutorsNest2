@@ -114,7 +114,7 @@ public class StudentDashBoardController extends StudentDashboard implements Init
     private Button logout;
 
 
-    protected String prefTuitionArea;     /////pore private banaite hobe
+    protected String prefTuitionArea;
     protected String salary;
     protected String prefSubject;
     protected Teacher teacherSelected;
