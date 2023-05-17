@@ -1,4 +1,4 @@
-# Tutor's Nest
+# Tutors Nest
 
 ![Project Image](/Images/tutorsNestCoverPhoto.png)
 
@@ -10,18 +10,19 @@ Tutor's Nest is a user-friendly desktop application created using the JavaFX fra
 
 ### Table of Contents
 
-- **[How To Install & Run Tutor's Nest](#how-to-install-and-run)**
-- **[PLatform, Library & Tools](#platform-library-and-tools)**
-- **[Project Interface](#project-interface)**
-- **[Limitation](#limitations)**
-- **[Reference](#reference)**
-- **[Author Info](#author-info)**
+- _[How To Install & Run Tutors Nest](#how-to-install-and-run-tutors-nest)_
+- _[PLatform, Library & Tools](#platform-library-and-tools)_
+- _[Project Interface](#project-interface)_
+- _[Limitations](#limitations)_
+- _[Reference](#reference)_
+- _[Author Info](#author-info)_
+
 
 
 ---
 
 
-# How To Install & Run Tutor's Nest
+## How To Install & Run Tutor's Nest
 
 ### Download & Installation
 
@@ -47,3 +48,65 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 
 ### Build & Run
 - Go to src/main/java/com/example/javaproject/Main.java and run the file
+
+
+![Back To The Top](#Tutors Nest)
+---
+
+## PLatform, Library & Tools
+
+#### Programming Languages
+
+- Java
+
+#### Libraries
+
+- Javafx
+
+#### Database
+
+- MySQL
+
+#### UI Designing Tool
+
+- CSS, Scene Builder
+
+#### Extra Tools
+
+- Git/GitHub
+
+
+---
+
+## Project Interface
+
+
+
+
+---
+
+## Limitations
+
+- Messaging : A database server has been used to communicate between tutors and students . But when a student sends a message to the teacher, then previous messaging automatically deletes . that is not user friendly .
+- Payment System  :  individual tutors dues are not shown . So students can not see who will get money from them .
+- There is no 'WishList' system in the project .
+- The app runs too slow because of slow internet connection.
+
+
+---
+
+## Reference
+
+- [JavaFx](https://openjfx.io/)
+
+---
+
+## Author Info
+
+- Ahaj Mahhin Faiak - [@TERRORBLOOD47](https://github.com/TerrorBlood47)
+- Fahim Shakil - [@fahim33-eng](https://github.com/fahim33-eng)
+- Rokonuzzaman Rokon - [@Rokon132](https://github.com/Rokon132)
+
+
+
+
