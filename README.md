@@ -1,8 +1,10 @@
 # Tutors Nest
 
+
 ![Project Image](/Images/tutorsNestCoverPhoto.png)
 
 >A javafx project 
+
 
 Tutor's Nest is a user-friendly desktop application created using the JavaFX framework. Its main goal is to provide a centralized platform where students can effortlessly connect with private tutors who specialize in the subjects they need help with. With Tutor's Nest, students can easily navigate through its intuitive interface to search for tutors based on specific criteria such as subject, location, and availability. Once a suitable tutor is found, students can schedule a session, book it, and pay for it through the application, all in a secure and hassle-free manner. Tutor's Nest is designed to simplify the process of finding and booking private tutoring services, making academic help outside of the traditional classroom setting easily accessible to all.
 
@@ -10,17 +12,21 @@ Tutor's Nest is a user-friendly desktop application created using the JavaFX fra
 
 ### Table of Contents
 
-- _[How To Install and Run](#how-to-install-and-run)_
+- **[How To Install and Run](#how-to-install--run)**
 
-- _[Platform and Tools](#platform_and_tools)_
+- **[PLatform, Library & Tools](#platform-library--tools)**
+    
+    - _[Download & Installation](#download--installation)_
+    - _[Project SetUp](#project-setup)_
+    - _[Build & Run](#build--run)_
 
-- _[Project Interface](#project-interface)_
+- **[Project Interface](#project-interface)**
 
-- _[Limitations](#limitations)_
+- **[Limitations](#limitations)**
  
-- _[Reference](#reference)_
+- **[Reference](#reference)**
 
-- _[Author Info](#author-info)_
+- **[Author Info](#author-info)**
 
 
 
@@ -55,7 +61,7 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 - Go to src/main/java/com/example/javaproject/Main.java and run the file
 
 
-![Back To The Top](#TutorsNest)
+![Back To The Top](#tutors-nest)
 
 ---
 
@@ -83,7 +89,7 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 
 
 
-![Back To The Top](#TutorsNest)
+![Back To The Top](#tutors-nest)
 
 ---
 
@@ -94,7 +100,7 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 
 
 
-![Back To The Top](#TutorsNest)
+![Back To The Top](#tutors-nest)
 
 ---
 
@@ -107,7 +113,7 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 
 
 
-![Back To The Top](#TutorsNest)
+![Back To The Top](#tutors-nest)
 
 ---
 
@@ -116,7 +122,7 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 - [JavaFx](https://openjfx.io/)
 
 
-![Back To The Top](#TutorsNest)
+![Back To The Top](#tutors-nest)
 
 ---
 
@@ -127,5 +133,5 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 - Rokonuzzaman Rokon - [@Rokon132](https://github.com/Rokon132)
 
 
-![Back To The Top](#TutorsNest)
+![Back To The Top](#tutors-nest)
 
