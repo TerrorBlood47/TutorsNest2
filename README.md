@@ -35,6 +35,7 @@ Tutor's Nest is a user-friendly desktop application created using the JavaFX fra
 
 ## How To Install & Run
 
+
 ### Download & Installation
 
 - Install _INTELLIJ IDEA Community Edition_ from the given link: [Intellij IDEA Community Edition](https://www.jetbrains.com/idea/download/#section=linux)
@@ -48,6 +49,8 @@ sudo mysql_secure_installation
 - Download Javafx SDK 20 from here : [JavaFX SDK](https://openjfx.io)
 - Download "mysql-connector-java-8.0.32.jar" from this link: [MySQL Connector Java](https://dev.mysql.com/downloads/connector/j/)
 
+
+
 ### Project SetUp
 
 - Clone the git repository in the INTELLIJ ide
@@ -57,8 +60,11 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 - Go to File > Project Structure > Libraries , click the plus sign and add the path to the 'lib' folder of the 'SDK' folder you've downloaded
 - Add "mysql-connector-java-8.0.32.jar" in File > Project Structure > Modules 
 
+
+
 ### Build & Run
 - Go to src/main/java/com/example/javaproject/Main.java and run the file
+
 
 
 ![Back To The Top](#tutors-nest)
