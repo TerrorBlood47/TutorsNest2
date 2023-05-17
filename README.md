@@ -10,11 +10,16 @@ Tutor's Nest is a user-friendly desktop application created using the JavaFX fra
 
 ### Table of Contents
 
-- _[How To Install & Run Tutors Nest](#how-to-install-and-run-tutors-nest)_
-- _[PLatform, Library & Tools](#platform-library-and-tools)_
+- _[How To Install and Run](#how-to-install-and-run)_
+
+- _[Platform and Tools](#platform_and_tools)_
+
 - _[Project Interface](#project-interface)_
+
 - _[Limitations](#limitations)_
+ 
 - _[Reference](#reference)_
+
 - _[Author Info](#author-info)_
 
 
@@ -22,7 +27,7 @@ Tutor's Nest is a user-friendly desktop application created using the JavaFX fra
 ---
 
 
-## How To Install & Run Tutor's Nest
+## How To Install & Run
 
 ### Download & Installation
 
@@ -50,7 +55,8 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 - Go to src/main/java/com/example/javaproject/Main.java and run the file
 
 
-![Back To The Top](#Tutors Nest)
+![Back To The Top](#TutorsNest)
+
 ---
 
 ## PLatform, Library & Tools
@@ -76,12 +82,19 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 - Git/GitHub
 
 
+
+![Back To The Top](#TutorsNest)
+
 ---
 
 ## Project Interface
 
 
 
+
+
+
+![Back To The Top](#TutorsNest)
 
 ---
 
@@ -93,11 +106,17 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 - The app runs too slow because of slow internet connection.
 
 
+
+![Back To The Top](#TutorsNest)
+
 ---
 
 ## Reference
 
 - [JavaFx](https://openjfx.io/)
+
+
+![Back To The Top](#TutorsNest)
 
 ---
 
@@ -108,5 +127,5 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 - Rokonuzzaman Rokon - [@Rokon132](https://github.com/Rokon132)
 
 
-
+![Back To The Top](#TutorsNest)
 
