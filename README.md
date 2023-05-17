@@ -96,6 +96,15 @@ git clone https://github.com/fahim33-eng/tutorsNest2.git
 ## Project Interface
 
 
+![welcome](Images/getStarted.png)
+![login](Images/login.png)
+![choose](Images/choose.png)
+![signup](Images/signup.png)
+![home](Images/home.png)
+![classroom](Images/classroom.png)
+![hiretutors](Images/hiretutors.png)
+![inbox](Images/inbox.png)
+![teacherDashboard](Images/teacher.png)
 
 
 
